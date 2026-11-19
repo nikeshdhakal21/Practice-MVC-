@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Department List</title>
+</head>
+<body>
+<table>
+
+<thead>
+
+<tr> 
+
+<th>Department Name</th>
+<th>Department Head</th>
+<th>Department Phone</th>
+<th>Action</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr th:each="d:${department}">
+
+<td>[[${d.deptName}]]</td>
+<td>[[${d.deptHead}]]</td>
+<td>[[${d.deptPhone}]]</td>
+<td>
+<a th:href="@{'/dept/edit/'+${d.deptId}}">Edit</a>
+<a th:href="@{'/dept/delete/'+${d.deptId}}">Delete</a>
+
+</td>
+
+
+</tr>
+
+
+
+
+</tbody>
+
+
+
+
+
+</table>
+
+</body>
+</html>

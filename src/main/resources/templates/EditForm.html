@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>editForm</title>
+</head>
+<body>
+
+
+<form action="/dept/update" th:object="${department}" method="post">
+  
+  
+  
+  
+  Department Name<input type="text" th:field="*{deptName}"><br>
+  Department Head<input type="text" th:field="*{deptHead}"><br>
+  Department Phone<input type = "text"th:field="*{deptPhone}"><br>
+  
+   <input type="submit" value="update">
+   </form>
+
+
+	
+
+</body>
+</html>
